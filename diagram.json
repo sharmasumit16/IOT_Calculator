@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 203.65, "left": -109.57, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 179.01,
+      "left": 199.42,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -23.8,
+      "left": 291.74,
+      "attrs": {}
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 5.37, "left": -58.78, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:A0", "keypad1:C4", "green", [ "v54.24", "h312.79" ] ],
+    [ "uno:A1", "keypad1:C3", "green", [ "v-0.54", "h281.85" ] ],
+    [ "uno:A2", "keypad1:C2", "green", [ "v-5.31", "h264.01" ] ],
+    [ "uno:A3", "keypad1:C1", "green", [ "v-6.5", "h243.8" ] ],
+    [ "uno:2", "keypad1:R4", "blue", [ "v-26.46", "h40.15", "v188.16", "h219.13", "v9.53" ] ],
+    [
+      "uno:3",
+      "keypad1:R3",
+      "blue",
+      [ "v-31.22", "h54.41", "v172.68", "h7.15", "v11.91", "h192.93", "v0" ]
+    ],
+    [
+      "uno:4",
+      "keypad1:R2",
+      "blue",
+      [ "v-21.69", "h-1.59", "v5.95", "h85.75", "v165.54", "h172.68", "v5.95" ]
+    ],
+    [
+      "uno:5",
+      "keypad1:R1",
+      "blue",
+      [ "v-24.08", "h-0.42", "v0", "h0", "v-1.19", "h85.75", "v3.57", "h0", "v0" ]
+    ],
+    [ "uno:7", "lcd1:D7", "gold", [ "v-35.98", "h-4.05" ] ],
+    [ "lcd1:D6", "uno:8", "gold", [ "v30.79", "h-0.93" ] ],
+    [ "lcd1:D5", "uno:9", "gold", [ "v29.6", "h-0.96" ] ],
+    [ "lcd1:D4", "uno:10", "gold", [ "v30.79", "h-0.98" ] ],
+    [ "lcd1:E", "uno:11", "purple", [ "v15.31", "h42.25" ] ],
+    [ "lcd1:RS", "uno:12", "purple", [ "v14.12", "h-1.37" ] ],
+    [ "lcd1:A", "r1:1", "gray", [ "v29.6", "h-0.18" ] ],
+    [ "r1:2", "uno:5V", "red", [ "v270.68", "h-197.13" ] ],
+    [ "uno:5V", "lcd1:VDD", "red", [ "v70.91", "h-192.99", "v-279.87", "h140.53", "v4.76" ] ],
+    [ "lcd1:VSS", "uno:GND.1", "black", [ "v26.03", "h0.93", "v4.76", "h29.77" ] ],
+    [ "lcd1:K", "uno:GND.1", "black", [ "v30.79", "h3.41", "v0", "h-117.9" ] ]
+  ],
+  "dependencies": {}
+}
